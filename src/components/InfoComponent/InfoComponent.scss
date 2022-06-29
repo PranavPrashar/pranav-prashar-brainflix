@@ -36,31 +36,55 @@
             flex-direction: column;
         }
 
+        &__right{
+            padding-right: 2rem;
+        }
+
         
 
         &__channel {
             margin: 0;
             font-family: global.$avenirnext-bold;
             color: global.$brainflix-black;
+            font-size: 0.75rem;
+            line-height: 20px;
         }
 
         &__date {
             font-family: global.$avenirnext-regular;
             color: global.$silver;
+            font-size: 0.75rem;
+            line-height: 20px;
         }
 
         &__views {
             display: flex;
             flex-direction: row;
+            font-size: 0.75rem;
+            line-height: 20px;
         }
 
         &__likes{
             display: flex;
+            font-size: 0.75rem;
+            line-height: 20px;
         }
         &__viewscount {
             font-family: global.$avenirnext-regular;
             color:global.$silver;
             padding-left: 0.5rem;
+        }
+    }
+
+    &--details{
+        background-color:lightsalmon;
+        padding: 1rem 1rem;
+        font-size: 13px;
+        line-height: 18px;
+        &__paragraph{
+            margin: 0;
+            font-family: global.$avenirnext-regular;
+            color:global.$brainflix-black;
         }
     }
 }
