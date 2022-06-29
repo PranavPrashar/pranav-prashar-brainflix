@@ -1,0 +1,91 @@
+@use "../../styles/partials/global";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: lightblue;
+
+    &__logo {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__search {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 1rem 1rem;
+
+
+        &--input {
+            display: flex;
+            justify-content: flex-start;
+            // align-items: center;
+            // background: url("../../assets/icons/search.svg") no-repeat;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            width: 100%;
+            border-color: global.$mercury;
+            border-style: solid;
+            font-family: global.$avenirnext-regular;
+            color: global.$brainflix-black;
+        }
+
+        &--icon {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0;
+            margin: 0;
+
+            &--container {
+                padding-right: 1rem;
+                width: 100%;
+            }
+
+            border-radius: 50%;
+            width: 2.25rem;
+            height: 2.25rem;
+            background: url("../../assets/images/Mohan-muruge.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+    }
+
+    &__uploadbutton {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &--container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            background-color: global.$brainfix-blue;
+            height: 2.5rem;
+            padding: 0 2rem;
+            margin: 0 1rem 1rem 1rem;
+            border-radius: 4px;
+            justify-content: center;
+            align-items: center;
+            font-family: global.$avenirnext-regular;
+            color: global.$white;
+        }
+
+
+    }
+}

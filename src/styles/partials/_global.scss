@@ -1,0 +1,23 @@
+//Fonts
+@font-face {
+    font-family: avenirnext-bold;
+    src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: avenirnext-regular;
+    src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+$avenirnext-regular: 'avenirnext-regular';
+
+
+
+$brainfix-blue: #0095FF;
+$white : #FFFFFF;
+$mercury: #E1E1E1;
+$brainflix-black:#323232;
