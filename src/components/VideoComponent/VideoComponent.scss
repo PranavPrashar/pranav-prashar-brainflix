@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.video{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    &--container{
+        width: 100%;
+    }
+}

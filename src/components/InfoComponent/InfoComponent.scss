@@ -1,0 +1,66 @@
+@use "../../styles/partials/global";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.infocomponent {
+    margin: 0;
+    background-color: lightblue;
+
+    &--top {
+        padding: 1rem;
+    }
+
+    &--header {
+        margin: 0;
+        font-family: global.$avenirnext-regular;
+        border-bottom: 1px solid global.$mercury;
+        padding-bottom: 1rem;
+    }
+
+    &--bottom {
+        padding: 0 1rem;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px global.$mercury;
+        background-color: lightpink;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+
+        &__channel {
+            margin: 0;
+            font-family: global.$avenirnext-bold;
+            color: global.$brainflix-black;
+        }
+
+        &__date {
+            font-family: global.$avenirnext-regular;
+            color: global.$silver;
+        }
+
+        &__views {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__likes{
+            display: flex;
+        }
+        &__viewscount {
+            font-family: global.$avenirnext-regular;
+            color:global.$silver;
+            padding-left: 0.5rem;
+        }
+    }
+}
