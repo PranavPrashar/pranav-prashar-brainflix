@@ -13,7 +13,7 @@ function CommentComponent() {
         </div>
         <div className="conversation__right">
           <form id="joinConversationForm" className="conversation__right--form">
-            {/* <label for="nameInput" class="input-label">
+            {/* <label for="nameInput" className="input-label">
               Name
             </label>
             <input
@@ -23,7 +23,7 @@ function CommentComponent() {
               placeholder="Enter your name"
             /> */}
 
-            <label for="commentInput" class="input-label">
+            <label htmlFor="commentInput" className="input-label">
               Join the conversation
             </label>
             <textarea
@@ -55,7 +55,7 @@ function CommentComponent() {
         </div>
       </div>
       {/* Dynamic convestation container  */}
-      <div className="conversation__users"></div>
+      {/* <div className="conversation__users"></div> */}
     </div>
   );
 }
