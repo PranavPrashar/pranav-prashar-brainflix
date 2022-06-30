@@ -2,18 +2,32 @@ import React from "react";
 import json from "../../data/video-details.json";
 import "./NextVideosCard.scss";
 
-function NextVideosCards() {
-  const imageUrl = json[1].image;
+function NextVideosCards(props) {
+  // const imageUrl = json[1].image;
+  const handleVideoSelection = (e) => {
+    console.log("Called");
+    e.preventDefault();
+    props.onVideoSelect(props.title);
+  };
   return (
-    <div className="nextvideocards">
+    <div
+      className="nextvideocards"
+      onClick={handleVideoSelection}
+      onVideoSelect={props.onVideoSelect}
+    >
       <div className="nextvideocards--image__container">
-        <img src={imageUrl} alt="Testing" className="nextvideocards--image" />
+        <img
+          src={props.image}
+          alt="Testing"
+          className="nextvideocards--image"
+        />
       </div>
       <div className="nextvideocards--paragraph__container">
         <div className="nextvideocards--paragraph__item__upper">
-          Become A Travel Pro In One Easy Lesson
+          {props.title}
         </div>
-        <div className="nextvideocards--paragraph__item__lower">Todd Welch
+        <div className="nextvideocards--paragraph__item__lower">
+          {props.channel}
         </div>
       </div>
     </div>
