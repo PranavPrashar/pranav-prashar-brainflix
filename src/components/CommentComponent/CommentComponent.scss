@@ -120,7 +120,7 @@
       width: 100%;
       padding-right: 1rem;
       justify-content: baseline;
-      border-bottom: 1.5px global.$silver solid;
+      border-bottom: 1px global.$silver solid;
   
       @include tablet {
         // padding-left: 3rem;
@@ -134,7 +134,7 @@
         width: 100%;
         padding-right: 1rem;
         justify-content: baseline;
-        // border-bottom: 1.5px global.$silver solid; 
+        // border-bottom: 1px global.$silver solid; 
       }
   
       &--header {
@@ -286,7 +286,7 @@
       &--img {
         display: flex;
         flex-direction: row;
-        border-bottom: 1.5px global.$silver solid;
+        border-bottom: 1px global.$silver solid;
         // background-color: global.$silver;
         // background
       }
@@ -297,7 +297,7 @@
         padding-left: 1rem;
         padding-bottom: 1rem;
         width: 100%;
-        border-bottom: 1.5px global.$silver solid;
+        border-bottom: 1px global.$silver solid;
       }
   
       .details__wrapper {
