@@ -26,8 +26,10 @@ function Navbar() {
       </div>
       <div className="navbar__uploadbutton">
         <div className="navbar__uploadbutton--container">
-          <img src={Uploadlogo} alt="Upload Logo" />
-          Upload
+          <div className="navbar__uploadbutton--icon">
+            <img src={Uploadlogo} alt="Upload Logo" />
+          </div>
+          <div className="navbar__uploadbutton--upload">Upload</div>
         </div>
       </div>
     </div>
