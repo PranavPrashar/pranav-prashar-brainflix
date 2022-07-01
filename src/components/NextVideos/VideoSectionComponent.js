@@ -1,6 +1,5 @@
 import React from "react";
 import "./VideoSectionComponent.scss";
-// import NextVideosCards from "../NextVideosCards/NextVideosCards";
 import NextVideosCards from "../NextVideosCards/NextVideosCards";
 function VideoSectionComponent(props) {
   return (

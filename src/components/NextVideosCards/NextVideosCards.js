@@ -18,7 +18,7 @@ function NextVideosCards(props) {
       <div className="nextvideocards--image__container">
         <img
           src={props.image}
-          alt="Testing"
+          alt="Video Image"
           className="nextvideocards--image"
         />
       </div>
