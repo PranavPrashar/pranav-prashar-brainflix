@@ -261,6 +261,7 @@
     //conversation__users
     &__users {
       padding: 1rem 1rem;
+      padding: 1rem 1rem 0 1rem;
       display: flex;
       flex-direction: column;
       font-family: global.$avenirnext-regular;
@@ -277,7 +278,7 @@
       }
   
       &--container {
-        padding: 1rem 1rem;
+        padding: 0 1rem;
         display: flex;
         flex-direction: row;
       }
@@ -309,12 +310,16 @@
   
         &--name {
         // color: blue;
-          font-family: global.$avenirnext-regular;
+          font-family: global.$avenirnext-bold;
+          font-size: 13px;
+          line-height: 18px;
         }
   
         &--date {
           font-family: global.$avenirnext-regular;
           color: global.$silver;
+          font-size: 13px;
+          line-height: 18px;
         }
       }
   
@@ -322,6 +327,8 @@
 
         padding-top: 0.5rem;
         font-family: global.$avenirnext-regular;
+        font-size: 13px;
+          line-height: 18px;
       }
     }
   

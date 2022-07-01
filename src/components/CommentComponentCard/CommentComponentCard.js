@@ -9,8 +9,7 @@ function CommentComponentCard(props) {
     var month = date.getMonth() + 1;
     var day = date.getDate();
 
-    const result = year + "/" + month + "/" + day;
-    return result;
+    return year + "/" + month + "/" + day;
   }
   return props.video.map((video) => {
     // console.log(video);
