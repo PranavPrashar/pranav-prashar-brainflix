@@ -6,9 +6,21 @@
     box-sizing: border-box;
 }
 
+@mixin tablet {
+    @media (min-width: 767px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+
 .infocomponent {
     margin: 0;
-    background-color: lightblue;
+    // background-color: lightblue;
 
     &--top {
         padding: 1rem;
@@ -16,9 +28,13 @@
 
     &--header {
         margin: 0;
-        font-family: global.$avenirnext-regular;
+        font-family: global.$avenirnext-bold;
         border-bottom: 1px solid global.$mercury;
         padding-bottom: 1rem;
+        padding-right: 8rem;
+        font-size: 24px;
+        line-height: 32px;
+        // width: 75%;
     }
 
     &--bottom {
@@ -28,8 +44,9 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        // align-content: center;
         border-bottom: solid 1px global.$mercury;
-        background-color: lightpink;
+        // background-color: lightpink;
 
         &__left {
             display: flex;
@@ -44,6 +61,7 @@
 
         &__channel {
             margin: 0;
+            padding: 0 0 1rem 0;
             font-family: global.$avenirnext-bold;
             color: global.$brainflix-black;
             font-size: 0.75rem;
@@ -77,7 +95,7 @@
     }
 
     &--details{
-        background-color:lightsalmon;
+        // background-color:lightsalmon;
         padding: 1rem 1rem;
         font-size: 13px;
         line-height: 18px;

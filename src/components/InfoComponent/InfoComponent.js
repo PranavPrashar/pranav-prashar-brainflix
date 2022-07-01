@@ -21,7 +21,7 @@ function InfoComponent(props) {
       <div className="infocomponent--bottom">
         <span>
           <div className="infocomponent--bottom__left">
-            <p className="infocomponent--bottom__channel">{channel}</p>
+            <p className="infocomponent--bottom__channel"> {channel}</p>
             <p className="infocomponent--bottom__date">
               {convertTime(timestamp)}
             </p>
@@ -55,7 +55,6 @@ function convertTime(time) {
   var month = date.getMonth() + 1;
   var day = date.getDate();
 
-  const result = year + "/" + month + "/" + day;
-  return result;
+  return year + "/" + month + "/" + day;
 }
 export default InfoComponent;
