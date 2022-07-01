@@ -34,6 +34,10 @@
         padding-right: 8rem;
         font-size: 24px;
         line-height: 32px;
+        @include tablet{
+            border-bottom:none ;
+            padding-bottom: 0;
+        }
         // width: 75%;
     }
 
@@ -47,14 +51,29 @@
         // align-content: center;
         border-bottom: solid 1px global.$mercury;
         // background-color: lightpink;
+        @include tablet{
+            margin: 0 1rem;
+            padding: 0;
+        }
 
         &__left {
             display: flex;
             flex-direction: column;
+            @include tablet{
+                flex-direction: row;
+                align-items: baseline;
+                padding:0;
+            }
         }
 
         &__right{
             padding-right: 2rem;
+            @include tablet{
+                display: flex;
+                flex-direction: row;
+                padding:0;
+            }
+           
         }
 
         
@@ -66,6 +85,9 @@
             color: global.$brainflix-black;
             font-size: 0.75rem;
             line-height: 20px;
+            @include tablet{
+                padding-right: 1rem;
+            }
         }
 
         &__date {
@@ -80,6 +102,7 @@
             flex-direction: row;
             font-size: 0.75rem;
             line-height: 20px;
+            padding-right: 1rem;
         }
 
         &__likes{
