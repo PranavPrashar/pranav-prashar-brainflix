@@ -8,6 +8,7 @@ import VideoSectionComponent from "./components/NextVideos/VideoSectionComponent
 import { Component } from "react";
 import videoData from "./data/videos.json";
 import videoDataDetails from "./data/video-details.json";
+import "./styles/partials/_global.scss";
 class App extends Component {
   state = {
     video: videoData,
@@ -33,13 +34,16 @@ class App extends Component {
       <>
         <Navbar />
         <VideoComponent selectedVideo={this.state.selectedVideo} />
-        <InfoComponent selectedVideo={this.state.selectedVideo} />
-        <CommentComponent />
+        <div className="testing">
+          <InfoComponent selectedVideo={this.state.selectedVideo} />
+          <CommentComponent />
 
-        <CommentComponentCard
-          selectedVideo={this.state.selectedVideo}
-          video={commentFilter}
-        />
+          <CommentComponentCard
+            selectedVideo={this.state.selectedVideo}
+            video={commentFilter}
+          />
+        </div>
+
         <VideoSectionComponent
           video={videoFilter}
           onVideoSelect={this.handleVideoSelect}

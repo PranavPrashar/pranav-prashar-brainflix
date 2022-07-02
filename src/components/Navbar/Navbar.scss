@@ -34,6 +34,14 @@
         justify-content: space-around;
         // padding-left: 1rem;
         padding: 0 1rem;
+
+    }
+
+    @include desktop{
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0 6rem;
     }
 
     &__logo {
@@ -52,6 +60,15 @@
             margin: 0;
             padding-right: 3rem;
         }
+        @include desktop{
+            align-items: center;
+            align-content: center;
+            margin: 0;
+            // padding-left: 6rem;
+            width: 100%;
+            justify-content: flex-start;
+            // padding-right: 40rem;
+        }
     }
 
     &__search {
@@ -65,6 +82,13 @@
             width: 20rem;
             justify-content: flex-end;
             margin-right: -3rem;
+
+        }
+        @include desktop{
+            align-items: center;
+            width: 20rem;
+            justify-content: flex-end;
+            margin-right: 3rem;
 
         }
 
@@ -132,6 +156,9 @@
         @include tablet{
             align-items: baseline;
 
+        }
+        @include desktop{
+            justify-content: flex-end;
         }
 
         &--icon {
