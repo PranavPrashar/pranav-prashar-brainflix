@@ -5,6 +5,18 @@
   box-sizing: border-box;
 }
 
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
 .nextvideocards{
     display: flex;
     flex-direction: row;
@@ -12,6 +24,14 @@
     // padding-top: 1rem;
     height: 100%;
     color: global.$brainflix-black;
+    // background-color: lightcoral ;
+    @include tablet{
+        width: 50vw;
+    }
+
+    // @include desktop{
+    //     background-color: lightsalmon !important;
+    // }
     &--image__container{
         padding: 0;
         margin: 0;
@@ -22,14 +42,15 @@
         height: 5rem;
         object-fit: cover;
         padding-right: 1rem;
+        flex-wrap: nowrap;
     }
     &--paragraph__container{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: flex-start;
         height:5rem;
-        
+        width: 100%;
     }
     &--image{
         display: flex;
@@ -44,13 +65,18 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        flex-wrap: nowrap;
         padding: 0;
         margin: 0;
         &__upper{
             font-family: global.$avenirnext-bold;
+            width: 100%;
+            // background-color: blue;
         }
         &__lower{
             font-family: global.$avenirnext-regular;
+            width: 100%;
+            // background-color: yellow;
         }
     }
 
