@@ -27,8 +27,9 @@
   @include desktop {
     // text-align: left;
     display: flex;
-    align-items: center;
-    // padding-left: 10rem;
+    align-items: flex-start !important;
+    padding-left: 3rem;
+    // flex-wrap: wrap;
   }
 
   &__header {

@@ -35,19 +35,29 @@ class App extends Component {
         <Navbar />
         <VideoComponent selectedVideo={this.state.selectedVideo} />
         <div className="testing">
-          <InfoComponent selectedVideo={this.state.selectedVideo} />
-          <CommentComponent />
+          <div className="testing-div">
+            <InfoComponent selectedVideo={this.state.selectedVideo} />
+            <CommentComponent />
 
-          <CommentComponentCard
-            selectedVideo={this.state.selectedVideo}
-            video={commentFilter}
+            <CommentComponentCard
+              selectedVideo={this.state.selectedVideo}
+              video={commentFilter}
+            />
+          </div>
+
+          <div className="desktop-VideoSectionComponent">
+            <VideoSectionComponent
+              video={videoFilter}
+              onVideoSelect={this.handleVideoSelect}
+            />
+          </div>
+        </div>
+        <div className="desktop-hide ">
+          <VideoSectionComponent
+            video={videoFilter}
+            onVideoSelect={this.handleVideoSelect}
           />
         </div>
-
-        <VideoSectionComponent
-          video={videoFilter}
-          onVideoSelect={this.handleVideoSelect}
-        />
       </>
     );
   }
