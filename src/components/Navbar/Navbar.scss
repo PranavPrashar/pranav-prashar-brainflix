@@ -23,11 +23,9 @@
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: lightblue;
     width: 100%;
 
     @include tablet {
-        background-color: lightgreen;
         flex-direction: row;
         align-items: center;
         align-content: center;
