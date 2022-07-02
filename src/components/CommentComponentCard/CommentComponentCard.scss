@@ -156,12 +156,12 @@
         font-family: global.$avenirnext-regular;
   
         @include desktop {
-          margin-left: 12rem;
+          margin-left: 5rem;
           padding: 0.5rem 1rem;
           width: 50%;
           display: flex;
           justify-content: center;
-          align-items: flex-end;
+          align-items: center;
         }
 
         &--image{

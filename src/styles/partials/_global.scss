@@ -63,8 +63,12 @@ $alabaster: #fafafa;
 .testing{
   @include desktop{
     display: flex;
-    background-color: lightblue !important;
-    width: 100%;
+    // background-color: lightblue !important;
+    width: 70%;
+  }
+
+  &-div{
+    width: 100% !important;
   }
 }
 
@@ -76,7 +80,6 @@ $alabaster: #fafafa;
     display: none;
   }
   @include desktop{
-    background-color: blue;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
