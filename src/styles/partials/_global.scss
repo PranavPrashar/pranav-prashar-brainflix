@@ -1,18 +1,18 @@
 //Fonts
 @font-face {
-    font-family: avenirnext-bold;
-    src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: avenirnext-regular;
-    src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
-    font-style: normal;
-    font-weight: 400;
-  }
-  
+  font-family: avenirnext-bold;
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: avenirnext-regular;
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+  font-style: normal;
+  font-weight: 400;
+}
+
 $avenirnext-regular: 'avenirnext-regular';
 $avenirnext-bold: 'avenirnext-bold';
 
@@ -22,7 +22,28 @@ $brainfix-blue: #0095FF;
 $brainfix-darkblue: #0065AD;
 $white : #FFFFFF;
 $mercury: #E1E1E1;
-$brainflix-black:#323232;
-$silver:#AFAFAF;
+$brainflix-black: #323232;
+$silver: #AFAFAF;
 $mercury: #e1e1e1;
 $alabaster: #fafafa;
+
+
+@mixin headerLarger {
+  font-size: 33px;
+  line-height: 44px;
+}
+
+@mixin subheaderLarger{
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin sectionHeaderLarger{
+  font-size: 12px;
+  line-height: 20px;
+}
+
+@mixin bodyCopyLarger{
+  font-size: 14px;
+  line-height: 22px;
+}

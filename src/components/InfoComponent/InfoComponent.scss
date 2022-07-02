@@ -37,7 +37,11 @@
         @include tablet{
             border-bottom:none ;
             padding-bottom: 0;
+            // font-size: 33px;
+            // line-height: 44px;
+            @include global.headerLarger;
         }
+
         // width: 75%;
     }
 
@@ -84,10 +88,6 @@
             font-family: global.$avenirnext-bold;
             color: global.$brainflix-black;
             font-size: 0.75rem;
-            line-height: 20px;
-            @include tablet{
-                padding-right: 1rem;
-            }
         }
 
         &__date {
@@ -95,14 +95,19 @@
             color: global.$silver;
             font-size: 0.75rem;
             line-height: 20px;
+            @include tablet{
+                @include global.sectionHeaderLarger;
+                padding-left: 1rem;
+            }
         }
 
         &__views {
             display: flex;
             flex-direction: row;
             font-size: 0.75rem;
-            line-height: 20px;
+            // line-height: 20px;
             padding-right: 1rem;
+            
         }
 
         &__likes{
@@ -114,6 +119,9 @@
             font-family: global.$avenirnext-regular;
             color:global.$silver;
             padding-left: 0.5rem;
+            @include tablet{
+                @include global.sectionHeaderLarger;
+            }
         }
     }
 
@@ -126,6 +134,10 @@
             margin: 0;
             font-family: global.$avenirnext-regular;
             color:global.$brainflix-black;
+
+            @include tablet{
+                @include global.bodyCopyLarger;
+            }
         }
     }
 }
