@@ -13,38 +13,36 @@ function CommentComponent() {
         </div>
         <div className="conversation__right">
           <form id="joinConversationForm" className="conversation__right--form">
-            {/* <label for="nameInput" className="input-label">
-              Name
-            </label>
-            <input
-              type="text"
-              id="nameInput"
-              className="conversation__nameinput"
-              placeholder="Enter your name"
-            /> */}
-
-            <label htmlFor="commentInput" className="input-label">
-              Join the conversation
-            </label>
-            <textarea
-              id="conversation__commentinput"
-              className="conversation__commentinput"
-              name="commentInput"
-              rows="5"
-              cols="33"
-              placeholder="Add a new comment"
-            ></textarea>
-
-            <div className="conversation__right--commentbutton">
-              <img
-                src={commentIcon}
-                alt="comment icon"
-                className="conversation__right--commentbutton--image"
-              ></img>
-              <p className="conversation__right--commentbutton--text">
-                Comment
-              </p>
+            <div className="conversation__right--form-tablettop">
+              <label htmlFor="commentInput" className="input-label">
+                Join the conversation
+              </label>
             </div>
+
+            <div className="conversation__right--form-tabletbottom">
+              <div>
+                <textarea
+                  id="conversation__commentinput"
+                  className="conversation__commentinput"
+                  name="commentInput"
+                  // rows="5"
+                  // cols="33"
+                  placeholder="Add a new comment"
+                ></textarea>
+              </div>
+
+              <div className="conversation__right--commentbutton">
+                <img
+                  src={commentIcon}
+                  alt="comment icon"
+                  className="conversation__right--commentbutton--image"
+                ></img>
+                <p className="conversation__right--commentbutton--text">
+                  Comment
+                </p>
+              </div>
+            </div>
+
             {/* <button
               type="submit"
               className="conversation__right--commentbutton"
