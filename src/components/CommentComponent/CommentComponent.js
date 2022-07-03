@@ -37,6 +37,7 @@ function CommentComponent() {
                   alt="comment icon"
                   className="conversation__right--commentbutton--image"
                 ></img>
+
                 <p className="conversation__right--commentbutton--text">
                   Comment
                 </p>
