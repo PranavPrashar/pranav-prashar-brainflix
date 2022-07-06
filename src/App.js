@@ -5,10 +5,13 @@ import InfoComponent from "./components/InfoComponent/InfoComponent";
 import CommentComponent from "./components/CommentComponent/CommentComponent";
 import CommentComponentCard from "./components/CommentComponentCard/CommentComponentCard";
 import VideoSectionComponent from "./components/NextVideos/VideoSectionComponent";
+import Upload from "./components/Upload/Upload";
 import { Component } from "react";
 import videoData from "./data/videos.json";
 import videoDataDetails from "./data/video-details.json";
 import "./styles/partials/_global.scss";
+
+import { BrowserRouter, Route, Link } from "react-router-dom";
 class App extends Component {
   state = {
     video: videoData,
@@ -32,32 +35,39 @@ class App extends Component {
     // console.log(videoFilter);
     return (
       <>
-        <Navbar />
-        <VideoComponent selectedVideo={this.state.selectedVideo} />
-        <div className="testing">
-          <div className="testing-div">
-            <InfoComponent selectedVideo={this.state.selectedVideo} />
-            <CommentComponent />
+        <BrowserRouter>
+          <Route path="/" exact>
+            <Navbar />
+            <VideoComponent selectedVideo={this.state.selectedVideo} />
+            <div className="testing">
+              <div className="testing-div">
+                <InfoComponent selectedVideo={this.state.selectedVideo} />
+                <CommentComponent />
 
-            <CommentComponentCard
-              selectedVideo={this.state.selectedVideo}
-              video={commentFilter}
-            />
-          </div>
+                <CommentComponentCard
+                  selectedVideo={this.state.selectedVideo}
+                  video={commentFilter}
+                />
+              </div>
 
-          <div className="desktop-VideoSectionComponent">
-            <VideoSectionComponent
-              video={videoFilter}
-              onVideoSelect={this.handleVideoSelect}
-            />
-          </div>
-        </div>
-        <div className="desktop-hide ">
-          <VideoSectionComponent
-            video={videoFilter}
-            onVideoSelect={this.handleVideoSelect}
-          />
-        </div>
+              <div className="desktop-VideoSectionComponent">
+                <VideoSectionComponent
+                  video={videoFilter}
+                  onVideoSelect={this.handleVideoSelect}
+                />
+              </div>
+            </div>
+            <div className="desktop-hide ">
+              <VideoSectionComponent
+                video={videoFilter}
+                onVideoSelect={this.handleVideoSelect}
+              />
+            </div>
+          </Route>
+          <Route path="/upload">
+            <Upload />
+          </Route>
+        </BrowserRouter>
       </>
     );
   }
