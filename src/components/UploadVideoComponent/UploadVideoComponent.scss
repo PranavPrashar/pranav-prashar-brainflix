@@ -23,6 +23,10 @@
 
   @include tablet{
     background-color: lightgray;
+    padding: 0 2rem;
+  }
+  @include desktop{
+    background-color: lightpink;
   }
 }
 
@@ -53,6 +57,9 @@
     flex-direction: column;
     width: 100%;
     padding-bottom: 1rem;
+    @include tablet{
+      border-bottom: 1px global.$silver solid;
+    }
 
     &--label {
       display: block;
