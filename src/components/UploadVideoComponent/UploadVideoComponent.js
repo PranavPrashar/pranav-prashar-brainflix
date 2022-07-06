@@ -6,7 +6,7 @@ import uploadImage from "../../assets/images/Upload-video-preview.jpg";
 function UploadVideoComponent() {
   return (
     <div className="uploadvideocomponent">
-      <div>
+      <div className="uploadvideocomponent__header">
         <h2 className="uploadvideocomponent__header--large">Upload Video</h2>
       </div>
       <div>
