@@ -3,6 +3,7 @@ import "./VideoComponent.scss";
 import json from "../../data/video-details.json";
 import playButton from "../../assets/icons/fullscreen.svg";
 function VideoComponent(props) {
+  // console.log(props.selectedVideo.image);
   return (
     <>
       <div className="video">

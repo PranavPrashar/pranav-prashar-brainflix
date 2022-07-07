@@ -30,4 +30,8 @@
         flex-wrap: wrap;
         flex-direction: column;
     }
+
+    &__navlink{
+      text-decoration: none;
+    }
 }
