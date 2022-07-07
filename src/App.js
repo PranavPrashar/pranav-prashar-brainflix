@@ -10,14 +10,36 @@ import { Component } from "react";
 import videoData from "./data/videos.json";
 import videoDataDetails from "./data/video-details.json";
 import "./styles/partials/_global.scss";
-
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import axios from "axios";
+
+let apiKey = "7648cc0e-5070-4efb-8230-5a5e50639493";
+let url = "https://project-2-api.herokuapp.com/";
+//https://project-2-api.herokuapp.com/videos?api_key=7648cc0e-5070-4efb-8230-5a5e50639493
+
 class App extends Component {
   state = {
-    video: videoData,
-    selectedVideo: videoDataDetails[0],
+    // video: videoData,
+    videosData: [],
+    selectedVideo: null,
+    // selectedVideo: videoDataDetails[0],
   };
 
+  componentDidMount = () => {
+    axios
+      .get(
+        "https://project-2-api.herokuapp.com/videos?api_key=7648cc0e-5070-4efb-8230-5a5e50639493"
+      )
+      .then((response) => {
+        console.log(response.data);
+        this.setState({
+          videoData: response.data,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   handleVideoSelect = (title) => {
     this.setState({
       selectedVideo: videoDataDetails.find((video) => video.title === title),
@@ -31,8 +53,7 @@ class App extends Component {
     const commentFilter = videoDataDetails.filter(
       (video) => video.title === this.state.selectedVideo.title
     );
-    console.log(commentFilter);
-    // console.log(videoFilter);
+
     return (
       <>
         <BrowserRouter>

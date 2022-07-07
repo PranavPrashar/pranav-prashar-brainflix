@@ -9,6 +9,7 @@ function UploadVideoComponent() {
       <div className="uploadvideocomponent__header">
         <h2 className="uploadvideocomponent__header--large">Upload Video</h2>
       </div>
+
       <div>
         <p className="uploadvideocomponent__header--little">video thumbnail</p>
         <div className="uploadvideocomponent__container">

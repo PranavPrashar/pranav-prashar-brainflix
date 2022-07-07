@@ -14,9 +14,6 @@ function CommentComponentCard(props) {
   return props.video.map((video) => {
     // console.log(video);
     return video.comments.map((comment) => {
-      // console.log(comment);
-      console.log(comment.name);
-      console.log(comment.timestamp);
       return (
         <div className="conversation__users">
           <div className="conversation__users--container">
