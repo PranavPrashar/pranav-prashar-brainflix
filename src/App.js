@@ -21,8 +21,8 @@ class App extends Component {
   state = {
     // video: videoData,
     videosData: [],
-    selectedVideo: null,
-    // selectedVideo: videoDataDetails[0],
+    selectedVideo: videoDataDetails[0],
+    selectedVid: null,
   };
 
   componentDidMount = () => {
