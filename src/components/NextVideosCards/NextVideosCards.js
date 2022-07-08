@@ -12,13 +12,13 @@ function NextVideosCards(props) {
   return (
     <div
       className="nextvideocards"
-      onClick={handleVideoSelection}
+      // onClick={handleVideoSelection}
       onVideoSelect={props.onVideoSelect}
     >
       <div className="nextvideocards--image__container">
         <img
           src={props.image}
-          alt="Video Image"
+          alt="Video Alt"
           className="nextvideocards--image"
         />
       </div>

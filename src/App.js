@@ -13,6 +13,8 @@ import "./styles/partials/_global.scss";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
 
+import VideoHomePage from "./components/VideoHomePage/VideoHomePage";
+
 let apiKey = "7648cc0e-5070-4efb-8230-5a5e50639493";
 let url = "https://project-2-api.herokuapp.com/";
 //https://project-2-api.herokuapp.com/videos?api_key=7648cc0e-5070-4efb-8230-5a5e50639493
@@ -21,7 +23,7 @@ class App extends Component {
   state = {
     // video: videoData,
     videosData: [],
-    selectedVideo: videoDataDetails[0],
+    selectedVideo: videoDataDetails[0], // Sprint 1
     selectedVid: [],
   };
   //https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=7648cc0e-5070-4efb-8230-5a5e50639493
@@ -49,7 +51,7 @@ class App extends Component {
       .then((response) => {
         console.log(response.data);
         this.setState({
-          videoData: response.data,
+          videosData: response.data,
         });
         console.log(response.data[0].id);
         return response.data[0].id;
@@ -76,7 +78,7 @@ class App extends Component {
 
     const videoFilterDynamic = this.state.videosData.filter((video) => {
       return video.title !== this.state.selectedVid.title;
-    });
+    }); // Change to id
     const commentFilter = videoDataDetails.filter(
       (video) => video.title === this.state.selectedVideo.title
     );
@@ -84,38 +86,42 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-          <Route path="/" exact>
-            <Navbar />
-            {/* <VideoComponent selectedVideo={this.state.selectedVideo} /> */}
-            <VideoComponent selectedVideo={this.state.selectedVid} />
-            <div className="testing">
-              <div className="testing-div">
-                <InfoComponent selectedVideo={this.state.selectedVid} />
-                <CommentComponent />
+          <Navbar />
+          {/* <VideoComponent selectedVideo={this.state.selectedVideo} /> */}
+          <Switch>
+            <Route path="/" exact component={VideoHomePage} />
+            <Route path="/video/:id" component={VideoHomePage} />
+            <Route path="/upload" exact component={Upload} />
+          </Switch>
 
-                <CommentComponentCard
-                  selectedVideo={this.state.selectedVid}
-                  video={commentFilter}
-                />
-              </div>
+          {/* <VideoComponent selectedVideo={this.state.selectedVid} />
+          <div className="testing">
+            <div className="testing-div">
+              <InfoComponent selectedVideo={this.state.selectedVid} />
+              <CommentComponent />
 
-              <div className="desktop-VideoSectionComponent">
-                <VideoSectionComponent
-                  video={videoFilterDynamic}
-                  onVideoSelect={this.handleVideoSelect}
-                />
-              </div>
+              <CommentComponentCard
+                selectedVideo={this.state.selectedVid}
+                video={commentFilter}
+              />
             </div>
-            <div className="desktop-hide ">
+
+            <div className="desktop-VideoSectionComponent">
               <VideoSectionComponent
-                video={videoFilter} //Change this to videoFilterDynamic right now it doesnt work desktop?
+                video={videoFilterDynamic}
                 onVideoSelect={this.handleVideoSelect}
               />
             </div>
-          </Route>
+          </div>
+          <div className="desktop-hide ">
+            <VideoSectionComponent
+              video={videoFilterDynamic} //Change this to videoFilterDynamic right now it doesnt work desktop?
+              onVideoSelect={this.handleVideoSelect}
+            />
+          </div>
           <Route path="/upload">
             <Upload />
-          </Route>
+          </Route>*/}
         </BrowserRouter>
       </>
     );

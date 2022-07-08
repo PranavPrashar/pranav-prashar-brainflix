@@ -6,7 +6,7 @@ import UploadVideoComponent from "../UploadVideoComponent/UploadVideoComponent";
 function Upload() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <UploadVideoComponent />
     </>
   );

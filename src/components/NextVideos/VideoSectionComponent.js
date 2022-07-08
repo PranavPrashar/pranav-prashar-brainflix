@@ -9,7 +9,12 @@ function VideoSectionComponent(props) {
       {props.video.map((videos) => {
         return (
           <>
-            <NavLink to={`/video/${videos.id}`} className="nextvideos__navlink">
+            <NavLink
+              to={`/video/${videos.id}`}
+              className="nextvideos__navlink"
+              key={videos.id}
+              id={videos.id}
+            >
               <NextVideosCards
                 id={videos.id}
                 key={videos.id}
