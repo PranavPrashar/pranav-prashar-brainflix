@@ -22,11 +22,11 @@
   width: 100%;
 
   @include tablet{
-    background-color: lightgray;
+    // background-color: lightgray;
     padding: 0 2rem;
   }
   @include desktop{
-    background-color: lightpink;
+    // background-color: lightpink;
   }
 }
 
@@ -35,7 +35,7 @@
   &__header {
 
     @include tablet{
-      border-bottom: 1px global.$silver solid;
+      border-bottom: 1.5px global.$silver solid;
     }
 
     &--large {
@@ -58,7 +58,11 @@
     width: 100%;
     padding-bottom: 1rem;
     @include tablet{
-      border-bottom: 1px global.$silver solid;
+      border-bottom: 1.5px global.$silver solid;
+    }
+
+    @include desktop{
+      border-bottom: none;
     }
 
     &--label {
@@ -91,6 +95,14 @@
 
   }
 
+  &__wrapper{
+    @include desktop{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px global.$silver solid;
+    }
+  }
+
 }
 
 .uploadvideocomponent__container {
@@ -104,6 +116,10 @@
     @include tablet{
       width: 50%;
       border-radius: 3px;
+    }
+    @include desktop{
+      width: 100%;
+      padding: 0 1rem 1rem 0;
     }
   }
 }
