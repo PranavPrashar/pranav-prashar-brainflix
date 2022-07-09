@@ -296,6 +296,9 @@
         padding: 0 1rem;
         display: flex;
         flex-direction: row;
+        @include desktop{
+          width: 50vw;
+        }
       }
   
       &--img {
