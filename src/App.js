@@ -27,50 +27,51 @@ class App extends Component {
     selectedVid: [],
   };
   //https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=7648cc0e-5070-4efb-8230-5a5e50639493
-  fetchVideoDetails = (videoId) => {
-    axios
-      .get(
-        `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=7648cc0e-5070-4efb-8230-5a5e50639493`
-      )
-      .then((response) => {
-        console.log(response.data);
-        this.setState({
-          selectedVid: response.data,
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // fetchVideoDetails = (videoId) => {
+  //   axios
+  //     .get(
+  //       `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=7648cc0e-5070-4efb-8230-5a5e50639493`
+  //     )
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       this.setState({
+  //         selectedVid: response.data,
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
-  componentDidMount = () => {
-    axios
-      .get(
-        "https://project-2-api.herokuapp.com/videos?api_key=7648cc0e-5070-4efb-8230-5a5e50639493"
-      )
-      .then((response) => {
-        console.log(response.data);
-        this.setState({
-          videosData: response.data,
-        });
-        console.log(response.data[0].id);
-        return response.data[0].id;
-      })
-      .then((firstVideoID) => {
-        // console.log(firstVideoID);
-        this.fetchVideoDetails(firstVideoID); // Setting the first movie
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // componentDidMount = () => {
+  //   axios
+  //     .get(
+  //       "https://project-2-api.herokuapp.com/videos?api_key=7648cc0e-5070-4efb-8230-5a5e50639493"
+  //     )
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       this.setState({
+  //         videosData: response.data,
+  //       });
+  //       console.log(response.data[0].id);
+  //       return response.data[0].id;
+  //     })
+  //     .then((firstVideoID) => {
+  //       // console.log(firstVideoID);
+  //       this.fetchVideoDetails(firstVideoID); // Setting the first movie
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
-  handleVideoSelect = (title) => {
-    this.setState({
-      selectedVideo: videoDataDetails.find((video) => video.title === title),
-    });
-  };
+  // handleVideoSelect = (title) => {
+  //   this.setState({
+  //     selectedVideo: videoDataDetails.find((video) => video.title === title),
+  //   });
+  // };
   render() {
+    document.title = "Brainflix Website";
     const videoFilter = videoData.filter((video) => {
       return video.title !== this.state.selectedVideo.title;
       // Getting all the videos which are not the one which is selected

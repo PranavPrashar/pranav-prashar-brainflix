@@ -7,7 +7,7 @@ import { Router, Link } from "react-router-dom";
 function Navbar() {
   return (
     <div className="navbar">
-      <Link to="/" exact>
+      <Link to="/">
         {/* By putting the nav bar in a <Link> we can route it back to the front page */}
         <div className="navbar__logo">
           <img
@@ -34,7 +34,10 @@ function Navbar() {
           <div className="navbar__uploadbutton--icon">
             <img src={Uploadlogo} alt="Upload Logo" />
           </div>
-          <Link to="/upload" exact className="router__link">
+          <Link
+            to="/upload"
+            className="router__link navbar__uploadbutton--upload"
+          >
             <div className="navbar__uploadbutton--upload">Upload</div>
           </Link>
           {/* <div className="navbar__uploadbutton--upload">Upload</div> */}

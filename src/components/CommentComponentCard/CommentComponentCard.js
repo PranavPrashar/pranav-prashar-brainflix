@@ -15,7 +15,7 @@ function CommentComponentCard(props) {
     // console.log(video);
     return video.comments.map((comment) => {
       return (
-        <div className="conversation__users">
+        <div className="conversation__users" key={comment.name}>
           <div className="conversation__users--container">
             <div className="conversation__users--img">
               <div className="conversation__img"></div>
