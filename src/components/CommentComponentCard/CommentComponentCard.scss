@@ -156,7 +156,7 @@
         font-family: global.$avenirnext-regular;
   
         @include desktop {
-          margin-left: 5rem;
+          margin-left: 0;
           padding: 0.5rem 1rem;
           width: 50%;
           display: flex;
@@ -245,7 +245,7 @@
       resize: none;
 
       @include desktop{
-        width: 50vw;
+        width: 40vw;
       }
   
       &:focus {
