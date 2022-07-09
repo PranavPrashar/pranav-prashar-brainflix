@@ -69,7 +69,9 @@ $alabaster: #fafafa;
   }
 
   &-div{
-    width: 65%;
+    @include desktop{
+      width: 65%;
+    }
   }
 }
 

@@ -29,6 +29,7 @@
       display: flex;
       align-items: center;
       // padding-left: 10rem;
+      border-bottom: 1.5px global.$silver solid
     }
   
     &__header {
@@ -90,6 +91,10 @@
         padding-left: 3rem;
         // background-color: green;
       }
+
+      @include desktop{
+        padding-left: 0;
+      }
     }
   
     &__top {
@@ -123,6 +128,10 @@
       @include tablet {
         // padding-left: 3rem;
         // background-color: yellow;
+      }
+
+      @include desktop{
+        border-bottom: none;
       }
   
   
@@ -280,6 +289,7 @@
   
       @include desktop {
         width: 40%;
+        padding-left: 1rem;
       }
   
       &--container {
