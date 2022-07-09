@@ -108,6 +108,13 @@
                 color: global.$brainflix-black;
                 font-family: global.$avenirnext-regular;
             }
+
+            @include tablet{
+                width: 35vw;
+            }
+            @include desktop{
+                width: 15vw;
+            }
         }
 
         &--icon {
@@ -123,16 +130,38 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+
+
             @include tablet{
                 align-items: baseline;
+                display: none;
+            }
+            @include desktop{
+                display: none;
+            }
 
+            &--hide{
+                display: none;
+                @include tablet{
+                    // display: none;
+                    display: flex !important;
+                    align-items: baseline;
+                    padding-left: 2rem;
+                    margin-left: 1rem;
+                }
+                @include desktop{
+                    display: flex !important;
+                }
+            }
+
+            @include desktop{
+                display: none;
             }
 
             &--container {
                 padding-right: 1rem;
                 width: 100%;
-
-
+                align-items: center;
             }
 
             
@@ -151,8 +180,18 @@
         //     align-items: baseline;
         //     margin: 0;
         // }
+
+        // &--hide{
+        //     display: none;
+        //     @include tablet{
+        //         display: flex;
+        //     }
+        //     @include desktop{
+        //         display: flex;
+        //     }
+        // }
         @include tablet{
-            align-items: baseline;
+            align-items: center;
 
         }
         @include desktop{
