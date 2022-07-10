@@ -75,6 +75,11 @@ $alabaster: #fafafa;
   flex-direction: column;
   flex-wrap: wrap;
 }
+@mixin flexBox-row-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 @mixin display-none {
   display: none;
 }
