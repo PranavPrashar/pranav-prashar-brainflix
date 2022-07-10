@@ -80,6 +80,11 @@ $alabaster: #fafafa;
   flex-direction: row;
   flex-wrap: wrap;
 }
+@mixin flexBox-row-nowrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 @mixin display-none {
   display: none;
 }
