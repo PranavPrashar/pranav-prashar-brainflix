@@ -19,7 +19,8 @@
         font-family: global.$avenirnext-regular;
         color: global.$silver;
         padding: 1rem 0;
-        text-transform: uppercase;
+        // text-transform: uppercase;
+        @include global.uppercase;
         font-size: 12px;
         padding-left:1rem;
     }

@@ -73,9 +73,14 @@ $alabaster: #fafafa;
 @mixin flexBox-column-wrap {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 @mixin display-none {
   display: none;
+}
+
+@mixin uppercase {
+  text-transform: uppercase !important;
 }
 
 

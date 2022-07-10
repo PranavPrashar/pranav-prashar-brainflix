@@ -16,7 +16,7 @@ import axios from "axios";
 class VideoHomePage extends Component {
   state = {
     videosData: [],
-    selectedVid: [],
+    selectedVid: [], // current Vid
     selectedVidComments: [],
   };
   // Fetching video details using Axios, then setting state to selected video, selectinb video based on passed id
