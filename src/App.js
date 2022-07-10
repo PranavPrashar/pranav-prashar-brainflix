@@ -4,7 +4,7 @@ import VideoComponent from "./components/VideoComponent/VideoComponent";
 import InfoComponent from "./components/InfoComponent/InfoComponent";
 import CommentComponent from "./components/CommentComponent/CommentComponent";
 import CommentComponentCard from "./components/CommentComponentCard/CommentComponentCard";
-import VideoSectionComponent from "./components/NextVideos/VideoSectionComponent";
+import VideoSectionComponent from "./components/VideoSectionComponent/VideoSectionComponent";
 import Upload from "./components/Upload/Upload";
 import { Component } from "react";
 import videoData from "./data/videos.json";

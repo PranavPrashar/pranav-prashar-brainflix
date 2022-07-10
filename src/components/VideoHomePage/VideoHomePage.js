@@ -1,22 +1,15 @@
 import React, { Component } from "react";
-
-// import "./App.css";
 import "../../App.css";
-// import VideoComponent from "../components/VideoComponent/VideoComponent";
 import VideoComponent from "../VideoComponent/VideoComponent";
 import InfoComponent from "../InfoComponent/InfoComponent";
 import CommentComponent from "../CommentComponent/CommentComponent";
 import CommentComponentCard from "../CommentComponentCard/CommentComponentCard";
-import VideoSectionComponent from "../NextVideos/VideoSectionComponent";
-import Upload from "../Upload/Upload";
+import VideoSectionComponent from "../VideoSectionComponent/VideoSectionComponent";
+
 import videoDataDetails from "../../data/video-details.json";
-import videoData from "../../data/videos.json";
+
 import "../../styles/partials/_global.scss";
 import axios from "axios";
-
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-let apiKey = "7648cc0e-5070-4efb-8230-5a5e50639493";
-let url = "https://project-2-api.herokuapp.com/";
 
 class VideoHomePage extends Component {
   state = {
@@ -30,7 +23,7 @@ class VideoHomePage extends Component {
         `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=7648cc0e-5070-4efb-8230-5a5e50639493`
       )
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         this.setState({
           selectedVid: response.data,
         });
@@ -46,11 +39,11 @@ class VideoHomePage extends Component {
         "https://project-2-api.herokuapp.com/videos?api_key=7648cc0e-5070-4efb-8230-5a5e50639493"
       )
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         this.setState({
           videosData: response.data,
         });
-        console.log(response.data[0].id);
+        // console.log(response.data[0].id);
         return response.data[0].id;
       })
       .then((firstVideoID) => {
@@ -69,7 +62,7 @@ class VideoHomePage extends Component {
   };
 
   componentDidUpdate = (prevProbs) => {
-    console.log(this.props.match.params.id);
+    // console.log(this.props.match.params.id);
     const newVideoID = this.props.match.params.id;
     if (prevProbs.match.params.id !== newVideoID) {
       const videoToLoadId =
@@ -79,11 +72,6 @@ class VideoHomePage extends Component {
   };
 
   render() {
-    // const videoFilter = videoData.filter((video) => {
-    //   return video.title !== this.state.selectedVideo.title;
-    //   // Getting all the videos which are not the one which is selected
-    // });
-
     const videoFilterDynamic = this.state.videosData.filter((video) => {
       return video.title !== this.state.selectedVid.title;
     }); // Change to id
@@ -107,13 +95,13 @@ class VideoHomePage extends Component {
           <div className="desktop-VideoSectionComponent">
             <VideoSectionComponent
               video={videoFilterDynamic}
-              onVideoSelect={this.handleVideoSelect}
+              // onVideoSelect={this.handleVideoSelect}
             />
           </div>
         </div>
         <div className="desktop-hide ">
           <VideoSectionComponent
-            video={videoFilterDynamic} //Change this to videoFilterDynamic right now it doesnt work desktop?
+            video={videoFilterDynamic}
             onVideoSelect={this.handleVideoSelect}
           />
         </div>
@@ -123,3 +111,7 @@ class VideoHomePage extends Component {
 }
 
 export default VideoHomePage;
+
+// This is being used to render the Video home page, this consists of all the dynamic components such as the Comment Cards, Video section which is for showing the videos, Info Component which shows the user the data such as views and likes about the video
+
+// Filtering the videos using helper methods called commentFilter and videoFilterDynamic which filter based on the given criteria
