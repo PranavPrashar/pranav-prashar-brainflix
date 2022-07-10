@@ -1,30 +1,32 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @mixin tablet {
-    @media (min-width: 768px) {
-      @content;
-    }
+  @media (min-width: 768px) {
+    @content;
   }
-  
-  @mixin desktop {
-    @media (min-width: 1280px) {
-      @content;
-    }
-  }
-.video{
-    display: flex;
-    flex-direction: row;
-    width:100%;
+}
 
-    @include desktop{
-        height: 80vh;
-        background-color: black;
-    }
-    &--container{
-        width: 100%;
-    }
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+.video {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  @include desktop {
+    height: 80vh;
+    background-color: black;
+  }
+
+  &--container {
+    width: 100%;
+  }
 }

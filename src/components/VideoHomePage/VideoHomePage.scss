@@ -1,0 +1,54 @@
+@use "../../styles/partials/global";
+
+@mixin tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+
+.testing {
+    @include desktop {
+        display: flex;
+        // background-color: lightblue !important;
+        width: 100%;
+        padding-left: 6rem;
+    }
+
+    &-div {
+        @include desktop {
+            width: 65%;
+        }
+    }
+}
+
+.desktop-VideoSectionComponent {
+    // display: none;
+    @include global.display-none;
+    width: 100%;
+
+    @include tablet {
+        @include global.display-none;
+    }
+
+    @include desktop {
+        @include global.flexBox-column-wrap;
+        padding: 0;
+        // width: 25%;
+        width: 45%;
+        border-left: 1.5px global.$silver solid;
+        padding-right: 6rem;
+        margin: 0;
+    }
+}
+
+.desktop-hide {
+    @include desktop {
+        @include global.display-none;
+    }
+}

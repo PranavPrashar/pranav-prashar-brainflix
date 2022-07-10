@@ -60,20 +60,39 @@ $alabaster: #fafafa;
   line-height: 22px;
 }
 
-.testing{
-  @include desktop{
-    display: flex;
-    // background-color: lightblue !important;
-    width: 100%;
-    padding-left: 6rem;
-  }
-
-  &-div{
-    @include desktop{
-      width: 65%;
-    }
-  }
+@mixin flexBox-row {
+  display: flex;
+  flex-direction: row;
 }
+
+
+@mixin flexBox-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flexBox-column-wrap {
+  display: flex;
+  flex-direction: column;
+}
+@mixin display-none {
+  display: none;
+}
+
+
+// .testing{
+//   @include desktop{
+//     display: flex;
+//     // background-color: lightblue !important;
+//     width: 100%;
+//     padding-left: 6rem;
+//   }
+
+//   &-div{
+//     @include desktop{
+//       width: 65%;
+//     }
+//   }
+// }
 
 
 .desktop-VideoSectionComponent{

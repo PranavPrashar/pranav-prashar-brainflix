@@ -8,6 +8,8 @@ import VideoSectionComponent from "../VideoSectionComponent/VideoSectionComponen
 
 import videoDataDetails from "../../data/video-details.json";
 
+import "./VideoHomePage.scss";
+
 import "../../styles/partials/_global.scss";
 import axios from "axios";
 
@@ -15,8 +17,9 @@ class VideoHomePage extends Component {
   state = {
     videosData: [],
     selectedVid: [],
+    selectedVidComments: [],
   };
-
+  // Fetching video details using Axios, then setting state to selected video, selectinb video based on passed id
   fetchVideoDetails = (videoId) => {
     axios
       .get(
@@ -33,31 +36,47 @@ class VideoHomePage extends Component {
       });
   };
 
+  fetchComments = (videoId) => {
+    axios
+      .get(
+        `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=7648cc0e-5070-4efb-8230-5a5e50639493`
+      )
+      .then((response) => {
+        // console.log(response.data);
+        this.setState({
+          selectedVidComments: response.data.comment,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  //Allows us to run something once the component has mounted and is rendered, here we are calling the api for data and then setting using setState for the videosData and setting to response.data
   componentDidMount = () => {
     axios
       .get(
         "https://project-2-api.herokuapp.com/videos?api_key=7648cc0e-5070-4efb-8230-5a5e50639493"
       )
       .then((response) => {
-        // console.log(response.data);
         this.setState({
           videosData: response.data,
         });
-        // console.log(response.data[0].id);
         return response.data[0].id;
       })
       .then((firstVideoID) => {
-        // console.log(firstVideoID);
-        this.fetchVideoDetails(firstVideoID); // Setting the first movie
+        this.fetchVideoDetails(firstVideoID);
+        this.fetchComments(firstVideoID);
+        // Setting the first movie
       })
       .catch((error) => {
         console.log(error);
+        // Catching errors and printing to console
       });
   };
-
+  // Used to handle the video selection, it sets the state of selectedVideo by searching video
   handleVideoSelect = (title) => {
     this.setState({
-      selectedVideo: videoDataDetails.find((video) => video.title === title),
+      selectedVideo: this.videosData.find((video) => video.title === title),
     });
   };
 
