@@ -75,6 +75,12 @@ $alabaster: #fafafa;
   flex-direction: column;
   flex-wrap: wrap;
 }
+
+@mixin flexBox-column-nowrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: none;
+}
 @mixin flexBox-row-wrap {
   display: flex;
   flex-direction: row;
@@ -83,7 +89,7 @@ $alabaster: #fafafa;
 @mixin flexBox-row-nowrap {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: none;
 }
 @mixin display-none {
   display: none;

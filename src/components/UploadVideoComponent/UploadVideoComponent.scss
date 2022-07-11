@@ -15,9 +15,10 @@
 
 .uploadvideocomponent {
   // background-color: lightblue;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  // display: flex;
+  // flex-direction: column;
+  // flex-wrap: nowrap;
+  @include global.flexBox-column-nowrap;
   padding: 0 1rem;
   width: 100%;
 
@@ -48,14 +49,14 @@
       padding: 0;
       margin: 0;
       font-family: global.$avenirnext-regular;
-      text-transform: uppercase;
+      // text-transform: uppercase;
+      @include global.uppercase;
       color: global.$silver;
     }
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
+    @include global.flexBox-column;
     width: 100%;
     padding-bottom: 1rem;
     @include tablet{
@@ -75,9 +76,10 @@
     }
 
     &--textarea {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      // display: flex;
+      // flex-direction: row;
+      // flex-wrap: wrap;
+      @include global.flexBox-row-wrap;
       width: 100%;
       border-radius: 3px;
       background-color: global.$alabaster;
@@ -86,10 +88,7 @@
     }
 
     &--textarea::placeholder {
-      display: flex;
-      flex-direction: row;
-      // flex-wrap: wrap;
-      // width: 100%;
+      @include global.flexBox-row;
       align-items: center !important;
       padding-left: 1rem;
       padding-top: 0.5rem;
@@ -101,8 +100,7 @@
 
   &__wrapper{
     @include desktop{
-    display: flex;
-    flex-direction: row;
+      @include global.flexBox-row;
     border-bottom: 1px global.$silver solid;
     }
   }
@@ -129,8 +127,7 @@
 }
 
 .uploadvideocomponent__buttons {
-  display: flex;
-  flex-direction: column;
+  @include global.flexBox-column;
   justify-content: center;
   padding-bottom: 1rem;
 
@@ -141,8 +138,7 @@
   }
 
   &--publish {
-    display: flex;
-    flex-direction: row;
+    @include global.flexBox-row;
     justify-content: flex-start;
     align-items: center;
     // display: flex;
