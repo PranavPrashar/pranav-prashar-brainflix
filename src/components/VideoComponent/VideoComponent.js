@@ -1,16 +1,13 @@
 import React from "react";
 import "./VideoComponent.scss";
-import json from "../../data/video-details.json";
-import playButton from "../../assets/icons/fullscreen.svg";
+
 function VideoComponent(props) {
   return (
     <>
       <div className="video">
-        {/* <img src={playButton} alt="play button" /> */}
         <video
           controls
           className="video--container"
-          // poster="https://i.imgur.com/l2Xfgpl.jpg"
           poster={props.selectedVideo.image}
           onVideoSelect={props.onVideoSelect}
         ></video>
@@ -20,3 +17,6 @@ function VideoComponent(props) {
 }
 
 export default VideoComponent;
+
+// Component to render the HTML Video
+// To set poster, we are passing probs poster and then taking the props from video and passing to poster

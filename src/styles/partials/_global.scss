@@ -60,17 +60,60 @@ $alabaster: #fafafa;
   line-height: 22px;
 }
 
-.testing{
-  @include desktop{
-    display: flex;
-    // background-color: lightblue !important;
-    width: 70%;
-  }
-
-  &-div{
-    width: 100% !important;
-  }
+@mixin flexBox-row {
+  display: flex;
+  flex-direction: row;
 }
+
+
+@mixin flexBox-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flexBox-column-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@mixin flexBox-column-nowrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: none;
+}
+@mixin flexBox-row-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@mixin flexBox-row-nowrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: none;
+}
+@mixin display-none {
+  display: none;
+}
+
+@mixin uppercase {
+  text-transform: uppercase !important;
+}
+
+
+// .testing{
+//   @include desktop{
+//     display: flex;
+//     // background-color: lightblue !important;
+//     width: 100%;
+//     padding-left: 6rem;
+//   }
+
+//   &-div{
+//     @include desktop{
+//       width: 65%;
+//     }
+//   }
+// }
 
 
 .desktop-VideoSectionComponent{
@@ -84,7 +127,11 @@ $alabaster: #fafafa;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0;
-
+    // width: 25%;
+    width: 45%;
+    // background-color: blue;
+    border-left: 1.5px $silver solid;
+    padding-right: 6rem;
     margin: 0;
   }
 }

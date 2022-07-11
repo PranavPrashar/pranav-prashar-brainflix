@@ -1,13 +1,35 @@
 @use "../../styles/partials/global";
 
+
+@mixin tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+
 .nextvideos{
     &--header{
         margin: 0;
         font-family: global.$avenirnext-regular;
         color: global.$silver;
-        padding-bottom: 0.5rem;
-        text-transform: uppercase;
+        padding: 1rem 0;
+        @include global.uppercase;
         font-size: 12px;
         padding-left:1rem;
+    }
+
+    @include desktop{
+        width: auto;
+        @include global.flexBox-column-wrap;
+    }
+
+    &__navlink{
+      text-decoration: none;
     }
 }

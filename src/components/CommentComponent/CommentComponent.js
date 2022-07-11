@@ -5,7 +5,6 @@ import commentIcon from "../../assets/icons/add_comment.svg";
 function CommentComponent() {
   return (
     <div className="conversation">
-      {/* <h1 className="conversation__header">Join the conversation</h1> */}
       <div className="conversation__commentnumber">3 Comments</div>
       <div className="conversation__form">
         <div className="conversation__left">
@@ -25,8 +24,6 @@ function CommentComponent() {
                   id="conversation__commentinput"
                   className="conversation__commentinput"
                   name="commentInput"
-                  // rows="5"
-                  // cols="33"
                   placeholder="Add a new comment"
                 ></textarea>
               </div>
@@ -43,18 +40,9 @@ function CommentComponent() {
                 </p>
               </div>
             </div>
-
-            {/* <button
-              type="submit"
-              className="conversation__right--commentbutton"
-            >
-              Comment
-            </button> */}
           </form>
         </div>
       </div>
-      {/* Dynamic convestation container  */}
-      {/* <div className="conversation__users"></div> */}
     </div>
   );
 }

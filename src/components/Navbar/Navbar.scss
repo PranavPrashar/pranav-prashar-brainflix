@@ -19,10 +19,8 @@
 }
 
 .navbar {
-    display: flex;
-    flex-direction: column;
+    @include global.flexBox-column-wrap;
     justify-content: center;
-    flex-wrap: wrap;
     width: 100%;
 
     @include tablet {
@@ -44,14 +42,11 @@
 
     &__logo {
         margin-top: 1rem;
-        display: flex;
-        flex-direction: row;
+        // display: flex;
+        // flex-direction: row;
+        @include global.flexBox-row;
         justify-content: center;
-        // @include tablet{
-        //     flex-direction: column;
-        //     align-items: center;
-        //     align-content: space-around;
-        // }
+
         @include tablet{
             align-items: center;
             align-content: center;
@@ -70,8 +65,9 @@
     }
 
     &__search {
-        display: flex;
-        flex-direction: row;
+        // display: flex;
+        // flex-direction: row;
+        @include global.flexBox-row;
         justify-content: flex-start;
         margin: 1rem 1rem;
 
@@ -108,6 +104,13 @@
                 color: global.$brainflix-black;
                 font-family: global.$avenirnext-regular;
             }
+
+            @include tablet{
+                width: 35vw;
+            }
+            @include desktop{
+                width: 10vw;
+            }
         }
 
         &--icon {
@@ -123,16 +126,41 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+
+
             @include tablet{
                 align-items: baseline;
+                display: none;
+            }
+            @include desktop{
+                // display: none;
+                @include global.display-none;
+            }
 
+            &--hide{
+                // display: none;
+                @include global.display-none;
+                @include tablet{
+                    // display: none;
+                    display: flex !important;
+                    align-items: baseline;
+                    padding-left: 2rem;
+                    margin-left: 1rem;
+                }
+                @include desktop{
+                    display: flex !important;
+                }
+            }
+
+            @include desktop{
+                // display: none;
+                @include global.display-none;
             }
 
             &--container {
                 padding-right: 1rem;
                 width: 100%;
-
-
+                align-items: center;
             }
 
             
@@ -143,16 +171,27 @@
 
     &__uploadbutton {
         justify-content: center;
-        display: flex;
-        flex-direction: row;
+        // display: flex;
+        // flex-direction: row;
+        @include global.flexBox-row;
         align-items: center;
         // @include tablet{
         //     display: flex;
         //     align-items: baseline;
         //     margin: 0;
         // }
+
+        // &--hide{
+        //     display: none;
+        //     @include tablet{
+        //         display: flex;
+        //     }
+        //     @include desktop{
+        //         display: flex;
+        //     }
+        // }
         @include tablet{
-            align-items: baseline;
+            align-items: center;
 
         }
         @include desktop{
@@ -160,8 +199,9 @@
         }
 
         &--icon {
-            display: flex;
-            flex-direction: row;
+            // display: flex;
+            // flex-direction: row;
+            @include global.flexBox-row;
             justify-content: flex-start;
             // background-color: blue;
             // width: 50%;
@@ -172,19 +212,21 @@
 
         &--upload {
             // background-color: blue;
-            display: flex;
-            flex-direction: row;
+            // display: flex;
+            // flex-direction: row;
+            @include global.flexBox-row;
             justify-content: center;
             align-items: center;
             width: 100%;
+            text-decoration: none;
+            color: global.$white;
             // @include tablet{
             //     align-content: center;
             // }
         }
 
         &--container {
-            display: flex;
-            flex-direction: row;
+            @include global.flexBox-row;
             width: 100%;
             background-color: global.$brainfix-blue;
             height: 2.5rem;
@@ -204,4 +246,8 @@
 
 
     }
+}
+
+.router__link{
+    text-decoration: none;
 }

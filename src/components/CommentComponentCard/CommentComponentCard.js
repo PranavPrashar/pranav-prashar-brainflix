@@ -12,13 +12,10 @@ function CommentComponentCard(props) {
     return year + "/" + month + "/" + day;
   }
   return props.video.map((video) => {
-    // console.log(video);
+    console.log(video);
     return video.comments.map((comment) => {
-      // console.log(comment);
-      console.log(comment.name);
-      console.log(comment.timestamp);
       return (
-        <div className="conversation__users">
+        <div className="conversation__users" key={comment.name}>
           <div className="conversation__users--container">
             <div className="conversation__users--img">
               <div className="conversation__img"></div>

@@ -48,8 +48,7 @@
     &--bottom {
         padding: 0 1rem;
         margin: 0;
-        display: flex;
-        flex-direction: row;
+        @include global.flexBox-row;
         justify-content: space-between;
         align-items: center;
         // align-content: center;
@@ -61,8 +60,7 @@
         }
 
         &__left {
-            display: flex;
-            flex-direction: column;
+            @include global.flexBox-column;
             @include tablet{
                 flex-direction: row;
                 align-items: baseline;
@@ -73,8 +71,7 @@
         &__right{
             padding-right: 2rem;
             @include tablet{
-                display: flex;
-                flex-direction: row;
+                @include global.flexBox-row;
                 padding:0;
             }
            
