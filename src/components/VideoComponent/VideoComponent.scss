@@ -13,20 +13,6 @@
   }
 }
 
-<<<<<<< HEAD
-.video{
-    display: flex;
-    flex-direction: row;
-    width:100%;
-
-    
-    height: 110vh;
-    
-    &--container{
-        width: 100%;
-        // height: 50vh;
-    }
-=======
 @mixin desktop {
   @media (min-width: 1280px) {
     @content;
@@ -47,5 +33,4 @@
   &--container {
     width: 100%;
   }
->>>>>>> Sprint2/NavBar
 }
