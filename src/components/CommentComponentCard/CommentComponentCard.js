@@ -3,13 +3,13 @@ import "./CommentComponentCard.scss";
 
 function CommentComponentCard(props) {
   function convertTime(time) {
-    var timestamp = Number(time);
-    var date = new Date(timestamp);
-    var year = date.getFullYear();
-    var month = date.getMonth() + 1;
-    var day = date.getDate();
+    const timestamp = Number(time);
+    const date = new Date(timestamp);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
 
-    return year + "/" + month + "/" + day;
+    return day + "/" + month + "/" + year;
   }
   // return props.video.map((video) => {
   //   console.log(video);

@@ -168,6 +168,7 @@
     color: global.$brainfix-blue;
     font-family: global.$avenirnext-bold;
     text-align: center;
+    text-decoration: none;
     @include tablet{
       order: 1;
     }

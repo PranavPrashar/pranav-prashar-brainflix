@@ -4,24 +4,33 @@ import publishIcon from "../../assets/icons/publish.svg";
 import uploadImage from "../../assets/images/Upload-video-preview.jpg";
 import { NavLink } from "react-router-dom";
 
-function confirmPublish() {
-  alert("Video Published");
-}
-
 class UploadVideoComponent extends Component {
   state = {
     // publishButtonState: false,
     videoStatus: "",
+    formData: [],
   };
 
+  handleInput = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+    console.log("Video Title " + this.state.videotitle);
+    console.log("videodescription " + this.state.videodescription);
+  };
   handlePublishClick = (event) => {
-    window.confirm("Video Has been published");
-    // setTimeout(() => {
-    //   // event.preventDefault();
-    //   this.setState({ videoStatus: "Video Has been updated" });
-    // }, 2000);
-
-    // this.setState({videoStatus:"Video Has been updated"})
+    if (
+      this.state.videotitle === undefined ||
+      this.state.videodescription === undefined
+    ) {
+      console.log("Error Has occured");
+      this.setState({
+        videoStatus: "Please enter valid Title and Description",
+      });
+      event.preventDefault();
+    } else {
+      window.confirm("Video Has been published");
+    }
   };
   render() {
     return (
@@ -58,6 +67,8 @@ class UploadVideoComponent extends Component {
                 name="videotitle"
                 placeholder="Add a title to your video"
                 rows={2}
+                required
+                onChange={this.handleInput}
               ></textarea>
 
               <label
@@ -73,57 +84,14 @@ class UploadVideoComponent extends Component {
                 name="videodescription"
                 placeholder="Add a description to your video"
                 rows={6}
+                required
+                onChange={this.handleInput}
                 // cols={4}
               ></textarea>
             </form>
             <p className="confirmPublish">{this.state.videoStatus}</p>
           </div>
         </div>
-
-        {/* <div>
-        <p className="uploadvideocomponent__header--little">video thumbnail</p>
-        <div className="uploadvideocomponent__container">
-          <img
-            src={uploadImage}
-            alt="Video"
-            className="uploadvideocomponent__container--image"
-          />
-        </div>
-      </div>
-
-      <div className="uploadvideocomponent__form">
-        <form>
-          <label
-            className="uploadvideocomponent__form--label"
-            htmlFor="videotitle"
-          >
-            title your video
-          </label>
-          <textarea
-            id="videotitle"
-            className="uploadvideocomponent__form--textarea"
-            name="videotitle"
-            placeholder="Add a title to your video"
-            rows={2}
-          ></textarea>
-
-          <label
-            className="uploadvideocomponent__form--label"
-            htmlFor="videodescription"
-          >
-            Add a video description
-          </label>
-
-          <textarea
-            id="videodescription"
-            className="uploadvideocomponent__form--textarea"
-            name="videodescription"
-            placeholder="Add a description to your video"
-            rows={6}
-            // cols={4}
-          ></textarea>
-        </form>
-      </div> */}
 
         <div className="uploadvideocomponent__buttons">
           <span className="uploadvideocomponent__buttons--publish">
@@ -142,7 +110,12 @@ class UploadVideoComponent extends Component {
               </p>
             </NavLink>
           </span>
-          <span className="uploadvideocomponent__buttons--cancel">Cancel</span>
+          <NavLink to="/" className="uploadvideocomponent__buttons--cancel">
+            <span className="uploadvideocomponent__buttons--cancel">
+              Cancel
+            </span>
+          </NavLink>
+          {/* <span className="uploadvideocomponent__buttons--cancel">Cancel</span> */}
         </div>
       </div>
     );
