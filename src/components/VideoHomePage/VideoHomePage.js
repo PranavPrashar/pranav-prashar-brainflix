@@ -20,10 +20,12 @@ class VideoHomePage extends Component {
     selectedVidComments: [],
   };
   // Fetching video details using Axios, then setting state to selected video, selectinb video based on passed id
+  //https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=7648cc0e-5070-4efb-8230-5a5e50639493
+  //http://localhost:8080/videos/${videoId}?api_key=7648cc0e-5070-4efb-8230-5a5e50639493
   fetchVideoDetails = (videoId) => {
     axios
       .get(
-        `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=7648cc0e-5070-4efb-8230-5a5e50639493`
+        `http://localhost:8080/videos/${videoId}?api_key=7648cc0e-5070-4efb-8230-5a5e50639493`
       )
       .then((response) => {
         console.log(response.data);
@@ -34,26 +36,10 @@ class VideoHomePage extends Component {
       });
   };
 
-  // fetchComments = (videoId) => {
-  //   axios
-  //     .get(
-  //       `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=7648cc0e-5070-4efb-8230-5a5e50639493`
-  //     )
-  //     .then((response) => {
-  //       // console.log(response.data);
-  //       this.setState({
-  //         selectedVidComments: response.data.comment,
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
-  //Allows us to run something once the component has mounted and is rendered, here we are calling the api for data and then setting using setState for the videosData and setting to response.data
   componentDidMount = () => {
     axios
       .get(
-        "https://project-2-api.herokuapp.com/videos?api_key=7648cc0e-5070-4efb-8230-5a5e50639493"
+        "http://localhost:8080/videos?api_key=7648cc0e-5070-4efb-8230-5a5e50639493"
       )
       .then((response) => {
         this.setState({
@@ -90,9 +76,9 @@ class VideoHomePage extends Component {
   };
 
   render = () => {
-    console.log(this.state.videosData.length !== 0);
-    console.log(this.state.videosData);
-    console.log(this.state.selectedVid);
+    // console.log(this.state.videosData.length !== 0);
+    console.log("Video Data", this.state.videosData);
+    console.log("Selected Video", this.state.selectedVid);
 
     const videoFilterDynamic =
       this.state.videosData.length !== 0

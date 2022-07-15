@@ -4,6 +4,7 @@ import viewIcon from "../../assets/icons/views.svg";
 import heartIcon from "../../assets/icons/likes.svg";
 
 function InfoComponent(props) {
+  console.log("INfoComp Props", props);
   const { title, channel, timestamp, likes, views, description } =
     props.selectedVideo;
 

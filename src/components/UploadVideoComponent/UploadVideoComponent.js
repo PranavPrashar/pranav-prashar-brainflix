@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./UploadVideoComponent.scss";
 import publishIcon from "../../assets/icons/publish.svg";
 import uploadImage from "../../assets/images/Upload-video-preview.jpg";
+import axios from "axios";
 import { NavLink } from "react-router-dom";
 
 class UploadVideoComponent extends Component {
@@ -27,9 +28,18 @@ class UploadVideoComponent extends Component {
       this.setState({
         videoStatus: "Please enter valid Title and Description",
       });
-      event.preventDefault();
     } else {
-      window.confirm("Video Has been published");
+      // window.confirm("Video Has been published");
+      event.preventDefault();
+      const postObject = {
+        title: this.state.videotitle,
+        channel: this.state.videodescription,
+      };
+      axios
+        .post("http://localhost:8080/videos", postObject)
+        .then((response) => {
+          console.log(response.data);
+        });
     }
   };
   render() {
