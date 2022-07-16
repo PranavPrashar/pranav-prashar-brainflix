@@ -14,20 +14,15 @@
 }
 
 .uploadvideocomponent {
-  // background-color: lightblue;
-  // display: flex;
-  // flex-direction: column;
-  // flex-wrap: nowrap;
   @include global.flexBox-column-nowrap;
   padding: 0 1rem;
   width: 100%;
 
-  @include tablet{
-    // background-color: lightgray;
+  @include tablet {
     padding: 0 2rem;
   }
-  @include desktop{
-    // background-color: lightpink;
+
+  @include desktop {
     padding: 0 6rem;
   }
 }
@@ -36,7 +31,7 @@
 
   &__header {
 
-    @include tablet{
+    @include tablet {
       border-bottom: 1.5px global.$silver solid;
     }
 
@@ -49,7 +44,6 @@
       padding: 0;
       margin: 0;
       font-family: global.$avenirnext-regular;
-      // text-transform: uppercase;
       @include global.uppercase;
       color: global.$silver;
     }
@@ -59,11 +53,12 @@
     @include global.flexBox-column;
     width: 100%;
     padding-bottom: 1rem;
-    @include tablet{
+
+    @include tablet {
       border-bottom: 1.5px global.$silver solid;
     }
 
-    @include desktop{
+    @include desktop {
       border-bottom: none;
     }
 
@@ -76,9 +71,6 @@
     }
 
     &--textarea {
-      // display: flex;
-      // flex-direction: row;
-      // flex-wrap: wrap;
       @include global.flexBox-row-wrap;
       width: 100%;
       height: 8vh;
@@ -88,59 +80,54 @@
       align-items: center;
       line-height: 15px;
 
-      @include tablet{
+      @include tablet {
         height: 10vh;
         line-height: 2rem !important;
       }
     }
-    
+
 
     &--textarea::placeholder {
       @include global.flexBox-row;
       align-items: center !important;
-      // padding-left: 1rem;
-      // padding-top: 0.5rem;
       color: global.$brainflix-black;
       font-family: global.$avenirnext-regular;
-       @include tablet{
+
+      @include tablet {
         line-height: 2rem !important;
-       }
+      }
     }
 
     &--textarea--description {
-      // display: flex;
-      // flex-direction: row;
-      // flex-wrap: wrap;
       @include global.flexBox-row-wrap;
       width: 100%;
-      // height: 10vh;
+
       border-radius: 3px;
       background-color: global.$alabaster;
       resize: none;
       align-items: center;
       line-height: 2rem !important;
 
-      &::placeholder{
+      &::placeholder {
         @include global.flexBox-row;
-      align-items: center !important;
-      // padding-left: 1rem;
-      // padding-top: 0.5rem;
-      color: global.$brainflix-black;
-      font-family: global.$avenirnext-regular;
-       @include tablet{
-        line-height: 2rem !important;
-       }
+        align-items: center !important;
+        color: global.$brainflix-black;
+        font-family: global.$avenirnext-regular;
+
+        @include tablet {
+          line-height: 2rem !important;
+        }
       }
     }
 
-    
+
 
   }
 
-  &__wrapper{
-    @include desktop{
+  &__wrapper {
+    @include desktop {
       @include global.flexBox-row;
-    border-bottom: 1px global.$silver solid;
+      border-bottom: 1px global.$silver solid;
     }
   }
 
@@ -152,13 +139,13 @@
   &--image {
     width: 100%;
     border-radius: 3px;
-    // padding-bottom: 1rem;
 
-    @include tablet{
+    @include tablet {
       width: 50%;
       border-radius: 3px;
     }
-    @include desktop{
+
+    @include desktop {
       width: 100%;
       padding: 0 1rem 1rem 0;
     }
@@ -170,7 +157,7 @@
   justify-content: center;
   padding-bottom: 1rem;
 
-  @include tablet{
+  @include tablet {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
@@ -180,9 +167,7 @@
     @include global.flexBox-row;
     justify-content: flex-start;
     align-items: center;
-    // display: flex;
     margin: 1rem 0;
-    // padding: 0 2rem;
     background: global.$brainfix-blue;
     font-size: 1.5rem;
     text-align: center;
@@ -190,9 +175,9 @@
     border-radius: 0.5rem;
     color: white;
     font-family: global.$avenirnext-regular;
-   
 
-    @include tablet{
+
+    @include tablet {
       order: 2;
       margin-left: 6rem;
       padding: 0 3rem;
@@ -200,28 +185,21 @@
   }
 
   &--cancel {
-    // background-color: global.$brainfix-blue;
     margin: 1rem 0;
-    // border: 0.5rem global.$brainfix-blue solid;
     border-radius: 0.5rem;
     color: global.$brainfix-blue;
     font-family: global.$avenirnext-bold;
     text-align: center;
     text-decoration: none;
-    @include tablet{
+
+    @include tablet {
       order: 1;
     }
   }
 }
 
-.conversation__right--commentbutton--text{
-  text-decoration: none ;
+.conversation__right--commentbutton--text {
+  text-decoration: none;
   color: white;
 }
-
-// .confirmPublishHide{
-  
-// }
-
-
 

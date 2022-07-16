@@ -7,7 +7,6 @@ import { NavLink } from "react-router-dom";
 
 class UploadVideoComponent extends Component {
   state = {
-    // publishButtonState: false,
     videoStatus: "",
     formData: [],
   };
@@ -16,8 +15,6 @@ class UploadVideoComponent extends Component {
     this.setState({
       [event.target.name]: event.target.value,
     });
-    console.log("Video Title " + this.state.videotitle);
-    console.log("videodescription " + this.state.videodescription);
   };
   handlePublishClick = (event) => {
     if (
@@ -30,7 +27,6 @@ class UploadVideoComponent extends Component {
       });
     } else {
       window.confirm(`your video ${this.state.videotitle} has been published`);
-      // event.preventDefault();
       const postObject = {
         title: this.state.videotitle,
         channel: this.state.videodescription,
@@ -38,7 +34,8 @@ class UploadVideoComponent extends Component {
       axios
         .post("http://localhost:8080/videos", postObject)
         .then((response) => {
-          console.log(response.data);
+          return response.data;
+          // console.log(response.data);
         });
     }
   };
@@ -129,7 +126,6 @@ class UploadVideoComponent extends Component {
               Cancel
             </span>
           </NavLink>
-          {/* <span className="uploadvideocomponent__buttons--cancel">Cancel</span> */}
         </div>
       </div>
     );

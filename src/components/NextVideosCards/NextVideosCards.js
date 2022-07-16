@@ -3,18 +3,8 @@ import json from "../../data/video-details.json";
 import "./NextVideosCard.scss";
 
 function NextVideosCards(props) {
-  // const imageUrl = json[1].image;
-  const handleVideoSelection = (e) => {
-    console.log("Called");
-    e.preventDefault();
-    props.onVideoSelect(props.title);
-  };
   return (
-    <div
-      className="nextvideocards"
-      // onClick={handleVideoSelection}
-      // onVideoSelect={props.onVideoSelect}
-    >
+    <div className="nextvideocards">
       <div className="nextvideocards--image__container">
         <img
           src={"http://localhost:8080/" + props.image}

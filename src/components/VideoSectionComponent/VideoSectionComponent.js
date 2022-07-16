@@ -21,8 +21,6 @@ function VideoSectionComponent(props) {
               title={videos.title}
               channel={videos.channel}
               image={videos.image}
-              // onVideoSelect={props.onVideoSelect}
-              // onClick={handleVideoSelection}
             />
           </NavLink>
         );
