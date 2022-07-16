@@ -29,8 +29,8 @@ class UploadVideoComponent extends Component {
         videoStatus: "Please enter valid Title and Description",
       });
     } else {
-      // window.confirm("Video Has been published");
-      event.preventDefault();
+      window.confirm(`your video ${this.state.videotitle} has been published`);
+      // event.preventDefault();
       const postObject = {
         title: this.state.videotitle,
         channel: this.state.videodescription,
@@ -42,6 +42,10 @@ class UploadVideoComponent extends Component {
         });
     }
   };
+
+  redirect() {
+    this.props.history.push();
+  }
   render() {
     return (
       <div className="uploadvideocomponent">

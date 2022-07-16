@@ -247,6 +247,7 @@
     border-radius: 0.5rem;
     padding: 1rem;
     border: solid 1px global.$mercury;
+    line-height: 40px !important;
 
     @include tablet {
       // background-color: green !important;
@@ -258,6 +259,7 @@
       height: 1rem !important;
       overflow-y: hidden;
       margin-right: 1rem;
+      line-height: 5px !important;
     }
 
     &:focus {
@@ -268,10 +270,9 @@
     &::placeholder {
       color: global.$brainflix-black;
       font-family: global.$avenirnext-regular;
-      display: flex;
+      // display: flex;
       position: absolute;
-      top: 1px;
-      font-size: 12px;
+      top: 30% !important;
     }
   }
 

@@ -8,7 +8,7 @@ function VideoComponent(props) {
         <video
           controls
           className="video--container"
-          poster={props.selectedVideo.image}
+          poster={"http://localhost:8080/" + props.selectedVideo.image}
           onVideoSelect={props.onVideoSelect}
         ></video>
       </div>

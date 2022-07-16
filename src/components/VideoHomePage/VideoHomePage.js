@@ -83,7 +83,7 @@ class VideoHomePage extends Component {
     const videoFilterDynamic =
       this.state.videosData.length !== 0
         ? this.state.videosData.filter((video) => {
-            return video.title !== this.state.selectedVid?.title;
+            return video.id !== this.state.selectedVid?.id;
           })
         : []; // Change to id
     // const commentFilter = videoDataDetails.filter(

@@ -25,6 +25,8 @@ function CommentComponent() {
                   className="conversation__commentinput"
                   name="commentInput"
                   placeholder="Add a new comment"
+                  cols={1}
+                  rows={1}
                 ></textarea>
               </div>
 
