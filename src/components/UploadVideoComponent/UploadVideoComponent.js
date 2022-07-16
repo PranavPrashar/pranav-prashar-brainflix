@@ -94,7 +94,7 @@ class UploadVideoComponent extends Component {
               {/* <form> */}
               <textarea
                 id="videodescription"
-                className="uploadvideocomponent__form--textarea"
+                className="uploadvideocomponent__form--textarea--description"
                 name="videodescription"
                 placeholder="Add a description to your video"
                 rows={6}
