@@ -16,7 +16,7 @@ class UploadVideoComponent extends Component {
       [event.target.name]: event.target.value,
     });
   };
-  handlePublishClick = (event) => {
+  handlePublishClick = () => {
     if (
       this.state.videotitle === undefined ||
       this.state.videodescription === undefined
@@ -35,7 +35,6 @@ class UploadVideoComponent extends Component {
         .post("http://localhost:8080/videos", postObject)
         .then((response) => {
           return response.data;
-          // console.log(response.data);
         });
     }
   };

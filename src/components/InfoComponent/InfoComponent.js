@@ -50,11 +50,11 @@ function InfoComponent(props) {
 }
 
 function convertTime(time) {
-  var timestamp = Number(time);
-  var date = new Date(timestamp);
-  var year = date.getFullYear();
-  var month = date.getMonth() + 1;
-  var day = date.getDate();
+  let timestamp = Number(time);
+  let date = new Date(timestamp);
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
 
   return year + "/" + month + "/" + day;
 }
