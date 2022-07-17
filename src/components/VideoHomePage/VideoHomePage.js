@@ -44,7 +44,6 @@ class VideoHomePage extends Component {
         return response.data[0].id;
       })
       .then((firstVideoID) => {
-        console.log(firstVideoID);
         this.fetchVideoDetails(firstVideoID);
       })
       .catch((error) => {

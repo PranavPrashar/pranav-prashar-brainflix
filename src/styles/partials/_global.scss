@@ -1,17 +1,20 @@
 //Fonts
-@font-face {
-  font-family: avenirnext-bold;
-  src: url(../../assets/fonts/AvenirNextLTProBold.ttf);
-  font-weight: 700;
-  font-style: normal;
-}
+@import "./fonts";
+@import "./colors";
 
-@font-face {
-  font-family: avenirnext-regular;
-  src: url(../../assets/fonts/AvenirNextLTPro.ttf);
-  font-style: normal;
-  font-weight: 400;
-}
+// @font-face {
+//   font-family: avenirnext-bold;
+//   src: url(../../assets/fonts/AvenirNextLTProBold.ttf);
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: avenirnext-regular;
+//   src: url(../../assets/fonts/AvenirNextLTPro.ttf);
+//   font-style: normal;
+//   font-weight: 400;
+// }
 
 @mixin tablet {
   @media (min-width: 768px) {
@@ -25,19 +28,19 @@
   }
 }
 
-$avenirnext-regular: 'avenirnext-regular';
-$avenirnext-bold: 'avenirnext-bold';
+// $avenirnext-regular: 'avenirnext-regular';
+// $avenirnext-bold: 'avenirnext-bold';
 
 
 
-$brainfix-blue: #0095FF;
-$brainfix-darkblue: #0065AD;
-$white : #FFFFFF;
-$mercury: #E1E1E1;
-$brainflix-black: #323232;
-$silver: #AFAFAF;
-$mercury: #e1e1e1;
-$alabaster: #fafafa;
+// $brainfix-blue: #0095FF;
+// $brainfix-darkblue: #0065AD;
+// $white : #FFFFFF;
+// $mercury: #E1E1E1;
+// $brainflix-black: #323232;
+// $silver: #AFAFAF;
+// $mercury: #e1e1e1;
+// $alabaster: #fafafa;
 
 
 @mixin headerLarger {
@@ -98,22 +101,6 @@ $alabaster: #fafafa;
 @mixin uppercase {
   text-transform: uppercase !important;
 }
-
-
-// .testing{
-//   @include desktop{
-//     display: flex;
-//     // background-color: lightblue !important;
-//     width: 100%;
-//     padding-left: 6rem;
-//   }
-
-//   &-div{
-//     @include desktop{
-//       width: 65%;
-//     }
-//   }
-// }
 
 
 .desktop-VideoSectionComponent{

@@ -1,4 +1,5 @@
 @use "../../styles/partials/global";
+@import "../../styles/partials/colors";
 
 *,
 *::before,
@@ -65,7 +66,7 @@
     display: flex;
     flex-direction: row;
     background: url(../../assets/images/Mohan-muruge.jpg);
-    background-color: global.$silver;
+    background-color: $silver;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -108,7 +109,7 @@
     width: 100%;
     padding-right: 1rem;
     justify-content: baseline;
-    border-bottom: 1px global.$silver solid;
+    border-bottom: 1px $silver solid;
 
 
 
@@ -128,10 +129,10 @@
       justify-content: flex-start;
       align-items: center;
       margin: 1rem 0;
-      background: global.$brainfix-blue;
+      background: $brainfix-blue;
       font-size: 1.5rem;
       text-align: center;
-      border: 0.5rem global.$brainfix-blue solid;
+      border: 0.5rem $brainfix-blue solid;
       border-radius: 0.5rem;
       color: white;
       font-family: global.$avenirnext-regular;
@@ -184,7 +185,7 @@
   &__nameinput {
     height: 2rem;
     width: auto;
-    background-color: global.$alabaster;
+    background-color: $alabaster;
     border-radius: 0.5rem;
     padding-left: 1rem;
     border: solid 1px global.$mercury;
